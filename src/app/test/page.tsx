@@ -1,17 +1,11 @@
-"use client";
+import { SocialPlatform } from "@/types/SocialPlatform";
+import SignInButton from "@/components/SignInButton";
+import SocialCard from "@/components/SocialCard";
 
-import { signIn } from "next-auth/react";
 export default function TwitterOwnerBadge() {
   return (
-    <>
-      <h1>Test Page</h1>
-      <button
-        onClick={() => {
-          signIn("twitter");
-        }}
-      >
-        Test
-      </button>
-    </>
+    <div className="flex justify-center mt-10">
+      <SocialCard platform={SocialPlatform.X}>Content</SocialCard>
+    </div>
   );
 }
